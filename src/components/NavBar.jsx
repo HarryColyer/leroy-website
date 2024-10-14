@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logo from "../assets/scratch-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -8,8 +9,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 function NavBar() {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <nav className="roboto-font w-full bg-black py-4 px-10 xl:px-14 grid grid-cols-2 md:grid-cols-3 items-center border-b-2 border-b-red-700">
+    <nav className="relative roboto-font w-full h-20 z-40 bg-black py-4 px-10 xl:px-14 grid grid-cols-2 md:grid-cols-3 items-center border-b-2 border-b-red-700">
+      {/* Social Media Links */}
       <ul className="hidden text-white md:flex w-full space-x-4">
         <li>
           <a
@@ -39,14 +43,23 @@ function NavBar() {
       <a href="#" className="flex md:justify-center">
         <img src={logo} alt="Business Logo" className=" w-11 md:w-16 " />
       </a>
-      <button className="text-white flex justify-end text-2xl lg:hidden hover:text-red-700 transition-colors ease-in duration-200">
+      {/* Nav links Toggle */}
+      <button
+        onClick={() => setIsActive(!isActive)}
+        className="text-white flex justify-end text-center text-2xl lg:hidden hover:text-red-700 transition-colors ease-in duration-200"
+      >
         <FontAwesomeIcon icon={faBars} />
       </button>
-      <ul className="hidden text-white lg:flex justify-end space-x-4 xl:space-x-8">
+      {/* Nav Links */}
+      <ul
+        className={`absolute top-full  ${
+          isActive ? "-translate-x-40 md:-translate-x-56 opacity-100" : "opacity-0 invisible"
+        } -right-40 md:-right-56 transition-all duration-700  ease-in-out w-40 md:w-56 py-14 space-y-6 flex flex-col items-center bg-red-800 text-white lg:flex lg:justify-end  xl:space-x-8`}
+      >
         <li>
           <a
             href="#"
-            className="hover:text-red-700 transition-colors ease-in duration-200"
+            className="lg:hover:text-red-700 transition-colors ease-in duration-200"
           >
             About Us
           </a>
@@ -54,7 +67,7 @@ function NavBar() {
         <li>
           <a
             href="#"
-            className="hover:text-red-700 transition-colors ease-in duration-200"
+            className="lg:hover:text-red-700 transition-colors ease-in duration-200"
           >
             Portfolio
           </a>
@@ -62,7 +75,7 @@ function NavBar() {
         <li>
           <a
             href="#"
-            className="hover:text-red-700 transition-colors ease-in duration-200"
+            className="lg:hover:text-red-700 transition-colors ease-in duration-200"
           >
             Services
           </a>
@@ -70,9 +83,9 @@ function NavBar() {
         <li>
           <a
             href="#"
-            className="hover:bg-red-800 bg-red-700 py-2 px-5 rounded-sm"
+            className="lg:hover:bg-red-800 lg:bg-red-700 lg:py-2 lg:px-5 lg:rounded-sm"
           >
-            Qoutes
+            Quotes
           </a>
         </li>
       </ul>
