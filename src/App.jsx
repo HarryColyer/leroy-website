@@ -1,9 +1,11 @@
+import NavBar from "./components/NavBar"
+
 function App() {
 
   return (
     <>
-      <div className='bg-stone-950 w-screen min-h-screen' >
-        
+      <div className='bg-color w-screen min-h-screen font-sans' >
+        <NavBar />
       </div>
     </>
   )

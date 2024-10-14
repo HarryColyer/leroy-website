@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.red-color {
+   text-color: #d00a0b;
+}
+
+.roboto-font {
+   font-family: "Roboto Condensed", sans-serif;
+}
+
+ 
