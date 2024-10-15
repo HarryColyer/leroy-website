@@ -12,7 +12,7 @@ function NavBar() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <nav className="relative roboto-font w-full h-20 z-40 bg-black py-4 px-10 xl:px-14 grid grid-cols-2 md:grid-cols-3 items-center border-b-2 border-b-red-700">
+    <nav className="relative roboto-font w-full h-20 z-40 bg-black py-4 px-10 xl:px-14 grid grid-cols-2 md:grid-cols-3 items-center lg:jsu border-b-2 border-b-red-700">
       {/* Social Media Links */}
       <ul className="hidden text-white md:flex w-full space-x-4">
         <li>
@@ -53,8 +53,10 @@ function NavBar() {
       {/* Nav Links */}
       <ul
         className={`absolute top-full  ${
-          isActive ? "-translate-x-40 md:-translate-x-56 opacity-100" : "opacity-0 invisible"
-        } -right-40 md:-right-56 transition-all duration-700  ease-in-out w-40 md:w-56 py-14 space-y-6 flex flex-col items-center bg-red-800 text-white lg:flex lg:justify-end  xl:space-x-8`}
+          isActive
+            ? "-translate-x-40 md:-translate-x-56 opacity-100"
+            : "opacity-0 invisible"
+        } -right-40 md:-right-56 transition-all duration-700 ease-in-out w-40 md:w-56 py-14 lg:opacity-100 lg:w-full lg:p-0 lg:static lg:visible space-y-6 flex flex-col lg:space-y-0 lg:space-x-6 lg:flex-row lg:bg-inherit items-center bg-red-800 text-white lg:justify-end  xl:space-x-8`}
       >
         <li>
           <a
