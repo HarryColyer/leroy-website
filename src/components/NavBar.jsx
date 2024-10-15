@@ -62,7 +62,7 @@ function NavBar() {
             isActive
               ? "-translate-x-40 md:-translate-x-56 opacity-100"
               : "opacity-0 invisible"
-          } -right-40 md:-right-56 transition-all duration-700 ease-in-out w-40 md:w-56 py-14 lg:w-auto lg:opacity-100 lg:p-0 lg:static lg:visible space-y-6 flex flex-col lg:space-y-0 lg:space-x-2 lg:flex-row lg:justify-end lg:bg-inherit bg-red-800 text-white items-center xl:space-x-4`}
+          } -right-40 h-72 md:-right-56 transition-all duration-700 ease-in-out w-40 md:w-56 py-14 lg:h-fit lg:w-auto lg:opacity-100 lg:p-0 lg:static lg:visible space-y-6 flex flex-col lg:space-y-0 lg:space-x-2 lg:flex-row lg:justify-end lg:bg-inherit bg-red-800 text-white items-center xl:space-x-4`}
         >
           <li>
             <a

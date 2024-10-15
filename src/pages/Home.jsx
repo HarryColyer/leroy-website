@@ -3,22 +3,35 @@ import headerImg from "../assets/bathroom.jpg";
 function Home() {
   return (
     <div>
-      <header className="relative w-full max-h-80 lg:max-h-[450px] xl:max-h-[600px] overflow-hidden lg:grid lg:grid-cols-5">
-        {/* Image itself */}
-        <img
-          className="w-full h-full object-cover columns-1 col-start-4 col-end-6"
-          src={headerImg}
-          alt="header image of a bathroom"
-        />
-        {/* Image overlay */}
-        <div className="w-full inset-0 absolute bg-gradient-to-t from-[rgba(0,0,0,0.75)] to-[rgba(0,0,0,0.95)] z-10"></div>
-        <div className="text-white absolute top-0 z-20 py-7 px-10 sm:px-24 lg:px-40 lg:py-24 roboto-font space-y-1 lg:space-y-3 col-start-1 col-end-4 lg:bg-black lg:w-full lg:h-full">
-          <h1 className="text-red-800 text-2xl py-5 lg:text-4xl lg:py-8">
-            Scratch and Dent Repair Ltd
-          </h1>
-          <p className="lg:text-xl">Chipped tiles?</p>
-          <p className="lg:text-xl">Scratched countertops?</p>
-          <p className="lg:text-xl">We restore damaged surfaces to their original beauty.</p>
+      <header className="roboto-font text-white w-full lg:max-h-[450px] xl:max-h-[600px] overflow-hidden grid grid-cols-2 grid-rows-6 lg:grid-rows-2 lg:grid lg:grid-cols-5">
+        <div className="roboto-font bg-red-800 py-5 lg:bg-black w-full order-2 lg:order-1 col-span-2 row-span-3 lg:col-start-1 lg:col-end-4 flex flex-col lg:py-6 px-12">
+          <h2 className="text-3xl " >Why Replace When You Can Restore?</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Repellendus sit soluta consequatur odit impedit sed aliquam
+            perferendis earum perspiciatis officiis, enim laboriosam accusantium
+            adipisci quidem minima reiciendis nisi. Corrupti, iure?
+          </p>
+          <ul>
+            <li>Wood & laminates</li>
+            <li>Baths, sinks & showers</li>
+            <li>Brick & stone</li>
+            <li>Glass polishing</li>
+            <li>Wall & floor tiles</li>
+            <li>uPVC & aluminum</li>
+            <li>Kitchen surfaces</li>
+          </ul>
+        </div>
+
+        <div className="relative order-1 lg:order-2 h-auto sm:h-[350px] lg:max-h-[450px] w-full col-span-2 row-span-3 lg:row-span-4 lg:col-start-4 lg:col-end-6">
+          {/* Image itself */}
+          <img
+            className="w-full h-full object-cover"
+            src={headerImg}
+            alt="header image of a bathroom"
+          />
+          {/* Image overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.75)] to-[rgba(0,0,0,0.95)]"></div>
         </div>
       </header>
     </div>
